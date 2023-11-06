@@ -1,2 +1,3 @@
-node_modules
-creds.json
+/node_modules
+*.creds.json
+*.log
