@@ -1,3 +1,5 @@
+git rm --cached node_modules
+git rm --cached creds.jspm
 /node_modules
 *.creds.json
 *.log
