@@ -12,3 +12,5 @@ app.use(cors({ origin: "*" }));
 app.use(createAplicationRouter());
 
 app.listen(port, () => console.log("server up"));
+
+export default app;
