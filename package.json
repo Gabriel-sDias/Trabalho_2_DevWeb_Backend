@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "engines": {"node": "16.x"},
   "devDependencies": {
     "@types/express": "^4.17.20",
     "@types/node": "^20.8.10",
