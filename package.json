@@ -10,8 +10,8 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "start":"node ./src/server.ts",
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/server.ts"
+    "start":"node ./src/index.ts",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/index.ts"
   },
   "dependencies": {
     "@types/cors": "^2.8.15",
