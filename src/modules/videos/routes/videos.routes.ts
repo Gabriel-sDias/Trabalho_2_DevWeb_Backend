@@ -33,6 +33,16 @@ videoRoutes.get(
   VideosController.GetVideoById
 );
 
+videoRoutes.post(
+  "/getVideosByTitle",
+  celebrate({
+    [Segments.BODY]: Joi.object({
+      title: Joi.string().required(),
+    }),
+  }),
+  VideosController.GetVideoByTitle
+);
+
 videoRoutes.put(
   "/updateVideo",
   celebrate({

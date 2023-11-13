@@ -4,6 +4,7 @@ import { GetVideos } from "../services/GetVideos";
 import { GetVideoById } from "../services/GetVideoById";
 import { DeleteVideo } from "../services/DeleteVideo";
 import { UpdateVideo } from "../services/UpdateVideo";
+import { GetVideoByTitle } from "../services/GetVideosByTitle";
 export default class VideosController {
   static async CreateVideo(
     request: Request,
@@ -37,6 +38,16 @@ export default class VideosController {
     const { id } = request.params;
     const videoService = new GetVideoById();
     const result = await videoService.execute({ id });
+    return response.status(200).json(result);
+  }
+
+  static async GetVideoByTitle(
+    request: Request,
+    response: Response
+  ): Promise<Response> {
+    const { title } = request.body;
+    const videoService = new GetVideoByTitle();
+    const result = await videoService.execute({ title });
     return response.status(200).json(result);
   }
 
