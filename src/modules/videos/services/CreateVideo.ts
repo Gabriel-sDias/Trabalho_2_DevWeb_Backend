@@ -2,8 +2,8 @@ import { db } from "../../../database/firebase";
 import { firestore } from "firebase-admin";
 interface CreateVideoParams {
   title: string;
-  videoUrl: string;
   thumbnailUrl: string;
+  videoUrl: string;
   user: any;
 }
 export class CreateVideo {

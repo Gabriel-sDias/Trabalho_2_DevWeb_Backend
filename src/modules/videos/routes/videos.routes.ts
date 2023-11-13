@@ -33,4 +33,27 @@ videoRoutes.get(
   VideosController.GetVideoById
 );
 
+videoRoutes.put(
+  "/updateVideo",
+  celebrate({
+    [Segments.BODY]: Joi.object({
+      thumbnailUrl: Joi.string().optional(),
+      title: Joi.string().optional(),
+      videoId: Joi.string().required(),
+      userId: Joi.string().required(),
+    }),
+  }),
+  VideosController.UpdateVideo
+);
+
+videoRoutes.delete(
+  "/deleteVideo/:videoId",
+  celebrate({
+    [Segments.PARAMS]: Joi.object({
+      videoId: Joi.string().required(),
+    }),
+  }),
+  VideosController.DeleteVideo
+);
+
 export default videoRoutes;
