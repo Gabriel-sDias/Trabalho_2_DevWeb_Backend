@@ -10,7 +10,7 @@
     "typescript": "^5.2.2"
   },
   "scripts": {
-    "start":"node ./src/index.ts",
+    "start":"ts-node-esm src/index.ts",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/index.ts"
   },
   "dependencies": {
