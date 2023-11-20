@@ -8,7 +8,7 @@ const port = process.env.PORT || 5555;
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "https://trabalho-2-dev-web-frontend.vercel.app/" }));
+app.use(cors({ origin: "*" }));
 app.use(createAplicationRouter());
 
 app.listen(port, () => console.log("server up"));
